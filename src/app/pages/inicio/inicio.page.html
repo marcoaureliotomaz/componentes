@@ -1,10 +1,17 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>inicio</ion-title>
-  </ion-toolbar>
-</ion-header>
+<app-header  titulo="app ionic"></app-header>
 
 <ion-content>
+  <ion-list>
+    <ion-list-header>
+      <ion-label>Páginas</ion-label>
+    </ion-list-header>
+    
+    <ion-item *ngFor="let item of componentes" [routerLink]="item.link" detail>
+      <ion-icon [name]="item.icone" slot="start"></ion-icon>
+      <ion-label>{{item.nome}}</ion-label>
+    </ion-item>
+  </ion-list>
+
   <ion-button color="secondary" expand="full" routerLink="/alert">Alert</ion-button>
   <ion-button color="danger" expand="block"  routerLink="/action-sheet">Modal</ion-button>
   <ion-button color="danger" shape="round" fill="outline" >
