@@ -9,10 +9,15 @@ export class InicioPage implements OnInit {
 
   componentes : Componente [] = [
     {
-      icone : '',
+      icone : 'imagem',
       nome : 'Alerta',
-      link : '/Alerta'
-    }
+      link : '/alert'
+    },
+    {
+      icone : 'imagem',
+      nome : 'Modal',
+      link : '/action-sheet'
+    },
   ] ;
 
   constructor() { }
