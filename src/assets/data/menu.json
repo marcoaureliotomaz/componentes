@@ -1,0 +1,32 @@
+[
+    {
+    "icone" : "alert-circle-outline",
+    "nome" : "Alerta",
+    "link" : "/alert"
+  },
+  {
+    "icone" : "documents-outline",
+    "nome" : "Modal",
+    "link" : "/action-sheet"
+  },
+  {
+    "icone" : "book-outline",
+    "nome" : "Cards",
+    "link" : "/cards"
+  },
+  {
+    "icone" : "calendar-outline",
+    "nome" : "Datas",
+    "link" : "/datas"
+  },
+  {
+    "icone" : "grid-outline",
+    "nome" : "Grids",
+    "link" : "/grids"
+  },
+  {
+    "icone" : "grid-outline",
+    "nome" : "Inputs",
+    "link" : "/inputs"
+  }
+]

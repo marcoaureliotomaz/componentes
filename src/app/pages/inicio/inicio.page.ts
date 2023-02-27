@@ -1,4 +1,7 @@
+import { MenuComponent } from './../../componentes/menu/menu.component';
 import { Component, OnInit } from '@angular/core';
+import { MenuController } from '@ionic/angular';
+import { Componente } from 'src/app/interfaces/interfaces';
 
 @Component({
   selector: 'app-inicio',
@@ -28,17 +31,28 @@ export class InicioPage implements OnInit {
       nome : 'Datas',
       link : '/datas'
     },
+    {
+      icone : 'grid-outline',
+      nome : 'Grids',
+      link : '/grids'
+    },
+    {
+      icone : 'grid-outline',
+      nome : 'Inputs',
+      link : '/inputs'
+    },
   ] ;
 
-  constructor() { }
+  constructor(private menu: MenuController) { }
 
   ngOnInit() {
   }
 
+  toogleMenu() {
+    this.menu.toggle();
+    }
+    
+
 }
 
-interface Componente{
-  icone:string;
-  nome:string;
-  link: string;
-}
+
