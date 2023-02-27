@@ -18,6 +18,16 @@ export class InicioPage implements OnInit {
       nome : 'Modal',
       link : '/action-sheet'
     },
+    {
+      icone : 'book-outline',
+      nome : 'Cards',
+      link : '/cards'
+    },
+    {
+      icone : 'calendar-outline',
+      nome : 'Datas',
+      link : '/datas'
+    },
   ] ;
 
   constructor() { }

@@ -8,6 +8,8 @@ import { AlertController } from '@ionic/angular';
 })
 export class AlertPage implements OnInit {
 
+  tituloPagina:string = '';
+
   constructor(public alertController: AlertController) { }
 
   ngOnInit() {
@@ -42,7 +44,23 @@ export class AlertPage implements OnInit {
   async presentAlertInputs() {
     const alert = await this.alertController.create({
       header: 'Please enter your info',
-      buttons: ['OK'],
+      buttons: [
+        {
+          text: 'Cancel',
+          role: 'cancel',
+          handler: () => {
+            console.log('Alert canceled');
+          },
+        },
+        {
+          text: 'OK',
+          role: 'confirm',
+          handler: (data) => {
+            console.log('Alert confirmed');
+            this.tituloPagina = data.nome;
+          },
+        },
+      ],
       inputs: [
         {
           placeholder: 'Name',

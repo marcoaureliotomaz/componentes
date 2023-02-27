@@ -1,0 +1,24 @@
+<app-header titulo="Página de Datas"></app-header>
+
+<ion-content>
+<!--  value="{{dt | date:'YYYY-MM-DDTHH:mm'}}"-->
+  <ion-datetime 
+  placeholder="Dados" 
+  
+  display-format="YYYY-MM-DDTHH:mm"
+  [ngModel]="dt.toISOString"
+  (ionChange)="trocarData($event)"
+  ></ion-datetime>
+
+  <ion-content>
+    <!--  value="{{dt | date:'YYYY-MM-DDTHH:mm'}}"-->
+      <ion-datetime 
+      placeholder="Dados" 
+      
+      display-format="YYYY-MM-DDTHH:mm"
+      [ngModel]="dt.toISOString"
+      min="2019-01-01"
+      max="2023-12-31"
+      ></ion-datetime>
+
+</ion-content>
